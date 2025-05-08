@@ -1,0 +1,89 @@
+.section.about {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .section.about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section.about .aboutsection-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+    text-align: left; 
+  
+  }
+ 
+  .aboutsection-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left:9%;
+  
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary);
+    border-radius: var(--radius-sm);
+  }
+
+  .section.about .section-description {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    animation: fadeIn 1.5s ease-in-out;
+    text-align: left;
+  }
+  
+  .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: left;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  text-align: left ;
+  font-size: 1.2rem;
+  
+}
+.about-text span {
+    font-weight: bold; /* Corrected property name */
+    text-align: center; /* Optional: Ensures text alignment */
+    font-size: 1.2rem; /* Optional: Adjust font size for emphasis */
+    
+}
+
+.about-image {
+    flex: 0 0 auto;
+  text-align: right;
+}
+
+.about-img {
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set the same height as the width */
+    object-fit: cover; /* Ensures the image scales properly */
+    border-radius: 50%; /* Makes the image circular */
+    border: 3px solid #333; /* Optional: Add a border for styling */
+}
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
